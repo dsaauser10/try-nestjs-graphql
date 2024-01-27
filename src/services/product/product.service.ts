@@ -21,4 +21,20 @@ export class ProductService {
       throw error;
     }
   }
+
+  async updateOne(productUpdateArgs: Prisma.ProductUpdateArgs) {
+    try {
+      return this.prisma.product.update(productUpdateArgs);
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async deleteOne(productDeleteArgs: Prisma.ProductDeleteArgs) {
+    try {
+      return this.prisma.product.delete(productDeleteArgs);
+    } catch (error) {
+      throw error;
+    }
+  }
 }

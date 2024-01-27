@@ -1,6 +1,11 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { UserController } from './user.controller';
-import { CreateOneUserArgs, FindUniqueUserArgs, User } from 'src/@generated';
+import {
+  CreateOneUserArgs,
+  FindManyUserArgs,
+  FindUniqueUserArgs,
+  User,
+} from 'src/@generated';
 
 @Resolver(() => User)
 export class UserResolver {
@@ -32,17 +37,11 @@ export class UserResolver {
     nullable: true,
     description: 'get all users',
   })
-  async userFindMany(): Promise<User[] | void> {
+  async userFindMany(
+    @Args() userFindManyArgs: FindManyUserArgs,
+    // @Relations('products') relations: string[],
+  ): Promise<User[] | void> {
     return this.userController.findMany();
   }
 }
 
-//   @Query(() => [Product], {
-//     nullable: true,
-//     description: 'get all products',
-//   })
-//   async productFindMany(
-//     @Args() productFindManyArgs: FindManyProductArgs,
-//   ): Promise<Product[] | void> {
-//     return this.productcontroller.getAllProducts();
-//   }

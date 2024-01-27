@@ -13,4 +13,12 @@ export class ProductController {
   async getAllProducts() {
     return await this.productService.getAllProducts();
   }
+
+  async updateOne(productUpdateArgs: Prisma.ProductUpdateArgs) {
+    return await this.productService.updateOne(productUpdateArgs);
+  }
+
+  async deleteOne(productDeleteArgs: Prisma.ProductDeleteArgs) {
+    return await this.productService.deleteOne(productDeleteArgs);
+  }
 }

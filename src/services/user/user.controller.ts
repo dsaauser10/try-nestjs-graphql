@@ -11,10 +11,13 @@ export class UserController {
   }
 
   async findOne(userFindUniqueArgs: Prisma.UserFindUniqueArgs) {
-    return await this.userService.findOne(userFindUniqueArgs);
+    return await this.userService.findOne({
+      ...userFindUniqueArgs,
+      include: { products: true },
+    });
   }
 
   async findMany() {
-    return await this.userService.findMany();
+    return await this.userService.findMany({ include: { products: true } });
   }
 }

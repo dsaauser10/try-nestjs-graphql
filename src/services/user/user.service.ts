@@ -22,12 +22,11 @@ export class UserService {
     }
   }
 
-  async findMany() {
+  async findMany(userFindManyArgs: Prisma.UserFindManyArgs) {
     try {
-      return this.prisma.user.findMany();
+      return this.prisma.user.findMany(userFindManyArgs);
     } catch (error) {
       throw error;
     }
   }
-  
 }

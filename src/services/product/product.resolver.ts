@@ -4,6 +4,8 @@ import {
   CreateOneProductArgs,
   Product,
   FindManyProductArgs,
+  UpdateOneProductArgs,
+  DeleteOneProductArgs,
 } from 'src/@generated';
 
 @Resolver(() => Product)
@@ -30,4 +32,38 @@ export class ProductResolver {
   ): Promise<Product[] | void> {
     return this.productcontroller.getAllProducts();
   }
+
+  @Mutation(() => Product, {
+    nullable: true,
+    description: 'update a product',
+  })
+  async productUpdateOne(
+    @Args()
+    productUpdateArgs: UpdateOneProductArgs,
+  ): Promise<Product | void> {
+    return await this.productcontroller.updateOne({
+      where: { id: productUpdateArgs.where.id },
+      data: { ...productUpdateArgs.data },
+    });
+  }
+
+
+  @Mutation(() => Product, {
+    nullable: true,
+    description: 'delete a product',
+  })
+  async productDeleteOne(
+    @Args()
+    productDeleteArgs: DeleteOneProductArgs,
+  ): Promise<Product | void> {
+    return await this.productcontroller.deleteOne({
+      where: { id: productDeleteArgs.where.id },
+    });
+  }
+
+
+
+
+  
+
 }

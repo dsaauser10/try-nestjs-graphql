@@ -118,7 +118,7 @@ type Query {
   userFindOne(where: UserWhereUniqueInput!): User
 
   """get all users"""
-  userFindMany: [User!]
+  userFindMany(where: UserWhereInput, orderBy: [UserOrderByWithRelationInput!], cursor: UserWhereUniqueInput, take: Int, skip: Int, distinct: [UserScalarFieldEnum!]): [User!]
 }
 
 input ProductWhereInput {
@@ -373,9 +373,24 @@ input UserWhereUniqueInput {
   products: ProductListRelationFilter
 }
 
+enum UserScalarFieldEnum {
+  id
+  name
+  email
+  password
+  createdAt
+  updatedAt
+}
+
 type Mutation {
   """create a new product"""
   productCreateOne(data: ProductCreateInput!): Product
+
+  """update a product"""
+  productUpdateOne(data: ProductUpdateInput!, where: ProductWhereUniqueInput!): Product
+
+  """delete a product"""
+  productDeleteOne(where: ProductWhereUniqueInput!): Product
 
   """create a new user"""
   userCreateOne(data: UserCreateInput!): User
@@ -410,6 +425,63 @@ input UserCreateWithoutProductsInput {
 input UserCreateOrConnectWithoutProductsInput {
   where: UserWhereUniqueInput!
   create: UserCreateWithoutProductsInput!
+}
+
+input ProductUpdateInput {
+  name: StringFieldUpdateOperationsInput
+  description: StringFieldUpdateOperationsInput
+  price: FloatFieldUpdateOperationsInput
+  imageName: StringFieldUpdateOperationsInput
+  imageURL: StringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  user: UserUpdateOneWithoutProductsNestedInput
+}
+
+input StringFieldUpdateOperationsInput {
+  set: String
+}
+
+input FloatFieldUpdateOperationsInput {
+  set: Float
+  increment: Float
+  decrement: Float
+  multiply: Float
+  divide: Float
+}
+
+input DateTimeFieldUpdateOperationsInput {
+  set: DateTime
+}
+
+input UserUpdateOneWithoutProductsNestedInput {
+  create: UserCreateWithoutProductsInput
+  connectOrCreate: UserCreateOrConnectWithoutProductsInput
+  upsert: UserUpsertWithoutProductsInput
+  disconnect: UserWhereInput
+  delete: UserWhereInput
+  connect: UserWhereUniqueInput
+  update: UserUpdateToOneWithWhereWithoutProductsInput
+}
+
+input UserUpsertWithoutProductsInput {
+  update: UserUpdateWithoutProductsInput!
+  create: UserCreateWithoutProductsInput!
+  where: UserWhereInput
+}
+
+input UserUpdateWithoutProductsInput {
+  id: StringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  email: StringFieldUpdateOperationsInput
+  password: StringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input UserUpdateToOneWithWhereWithoutProductsInput {
+  where: UserWhereInput
+  data: UserUpdateWithoutProductsInput!
 }
 
 input UserCreateInput {
