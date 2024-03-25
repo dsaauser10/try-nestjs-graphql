@@ -3,20 +3,20 @@ import { Resolver, Query, Mutation, Args, Float } from '@nestjs/graphql';
 import { Prisma } from '@prisma/client';
 import { Relations } from '../../utils/relations.decorator';
 import {
-  AggregateUser,
-  CreateManyUserArgs,
-  CreateOneUserArgs,
-  DeleteManyUserArgs,
-  DeleteOneUserArgs,
-  FindFirstUserArgs,
-  FindManyUserArgs,
-  FindUniqueUserArgs,
-  User,
-  UserAggregateArgs,
-  UpdateManyUserArgs,
-  UpdateOneUserArgs,
+  AggregateFile,
+  CreateManyFileArgs,
+  CreateOneFileArgs,
+  DeleteManyFileArgs,
+  DeleteOneFileArgs,
+  FindFirstFileArgs,
+  FindManyFileArgs,
+  FindUniqueFileArgs,
+  File,
+  FileAggregateArgs,
+  UpdateManyFileArgs,
+  UpdateOneFileArgs,
 } from '../../@generated';
-import { UserController } from './user.controller';
+import { FileController } from './file.controller';
 import BatchPayload from '../../model/batch-payload.model';
 import { replaceNullWithUndefined } from '../../utils/replace-null-with-undefined.function';
 // import { UseGuards } from '@nestjs/common';
@@ -24,28 +24,28 @@ import { replaceNullWithUndefined } from '../../utils/replace-null-with-undefine
 // import { PermissionGuard } from '../role-permission/role-permission.guard';
 // import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
-interface UserSelect {
-  select: Prisma.UserSelect;
+interface FileSelect {
+  select: Prisma.FileSelect;
 }
 
 // @UseGuards(JwtAuthGuard)
-@Resolver(() => User)
-export class UserResolver {
-  constructor(private readonly userController: UserController) {}
+@Resolver(() => File)
+export class FileResolver {
+  constructor(private readonly fileController: FileController) {}
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
   // // @UseGuards(PermissionGuard)
-  // @Mutation(() => User, {
+  // @Mutation(() => File, {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userCreateOne(
+  // async fileCreateOne(
   //   @Args()
-  //   userCreateArgs: CreateOneUserArgs,
-  //   @Relations() relations: UserSelect,
-  // ): Promise<User | void> {
-  //   return await this.userController.createOne({
-  //     ...replaceNullWithUndefined(userCreateArgs),
+  //   fileCreateArgs: CreateOneFileArgs,
+  //   @Relations() relations: FileSelect,
+  // ): Promise<File | void> {
+  //   return await this.fileController.createOne({
+  //     ...replaceNullWithUndefined(fileCreateArgs),
   //     select: relations.select,
   //   });
   // }
@@ -56,77 +56,77 @@ export class UserResolver {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userCreateMany(
+  // async fileCreateMany(
   //   @Args()
-  //   createManyUserArgs: CreateManyUserArgs,
+  //   createManyFileArgs: CreateManyFileArgs,
   // ) {
-  //   return await this.userController.createMany(
-  //     replaceNullWithUndefined(createManyUserArgs),
+  //   return await this.fileController.createMany(
+  //     replaceNullWithUndefined(createManyFileArgs),
   //   );
   // }
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
   // // @UseGuards(PermissionGuard)
-  // @Query(() => User, {
+  // @Query(() => File, {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // userFindOne(
+  // fileFindOne(
   //   @Args()
-  //   userFindUniqueArgs: FindUniqueUserArgs,
-  //   @Relations() relations: UserSelect,
-  // ): Promise<User | void> {
-  //   return this.userController.findOne({
-  //     ...replaceNullWithUndefined(userFindUniqueArgs),
+  //   fileFindUniqueArgs: FindUniqueFileArgs,
+  //   @Relations() relations: FileSelect,
+  // ): Promise<File | void> {
+  //   return this.fileController.findOne({
+  //     ...replaceNullWithUndefined(fileFindUniqueArgs),
   //     select: relations.select,
   //   });
   // }
 
   // @RequiredPermission(Permission.CREATE_CLAIM)
   // @UseGuards(PermissionGuard)
-  @Query(() => [User], {
+  @Query(() => [File], {
     nullable: true,
     description: 'Deskripsinya ada disini loh',
   })
-  userFindMany(
-    @Args() userFindManyArgs: FindManyUserArgs,
-    @Relations() relations: UserSelect,
+  fileFindMany(
+    @Args() fileFindManyArgs: FindManyFileArgs,
+    @Relations() relations: FileSelect,
   ) {
-    return this.userController.findMany({
-      ...replaceNullWithUndefined(userFindManyArgs),
+    return this.fileController.findMany({
+      ...replaceNullWithUndefined(fileFindManyArgs),
       select: relations.select,
     });
   }
 
   // @RequiredPermission(Permission.CREATE_CLAIM)
   // @UseGuards(PermissionGuard)
-  @Query(() => User, {
+  @Query(() => File, {
     nullable: true,
     description: 'Deskripsinya ada disini loh',
   })
-  userFindFirst(
+  fileFindFirst(
     @Args()
-    findFirstUserArgs: FindFirstUserArgs,
-    @Relations() relations: UserSelect,
-  ): Promise<User | void> {
-    return this.userController.findFirst({
-      ...replaceNullWithUndefined(findFirstUserArgs),
+    findFirstFileArgs: FindFirstFileArgs,
+    @Relations() relations: FileSelect,
+  ): Promise<File | void> {
+    return this.fileController.findFirst({
+      ...replaceNullWithUndefined(findFirstFileArgs),
       select: relations.select,
     });
   }
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
   // // @UseGuards(PermissionGuard)
-  // @Mutation(() => User, {
+  // @Mutation(() => File, {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userUpdateOne(
-  //   @Args() userUpdateOneArgs: UpdateOneUserArgs,
-  //   @Relations() relations: UserSelect,
+  // async fileUpdateOne(
+  //   @Args() fileUpdateOneArgs: UpdateOneFileArgs,
+  //   @Relations() relations: FileSelect,
   // ) {
-  //   return this.userController.updateOne({
-  //     ...replaceNullWithUndefined(userUpdateOneArgs),
+  //   return this.fileController.updateOne({
+  //     ...replaceNullWithUndefined(fileUpdateOneArgs),
   //     select: relations.select,
   //   });
   // }
@@ -137,9 +137,9 @@ export class UserResolver {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userUpdateMany(@Args() updateManyUserArgs: UpdateManyUserArgs) {
-  //   return this.userController.updateMany(
-  //     replaceNullWithUndefined(updateManyUserArgs),
+  // async fileUpdateMany(@Args() updateManyFileArgs: UpdateManyFileArgs) {
+  //   return this.fileController.updateMany(
+  //     replaceNullWithUndefined(updateManyFileArgs),
   //   );
   // }
 
@@ -149,8 +149,8 @@ export class UserResolver {
   //   nullable: false,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userDeleteOne(@Args() deleteOneUserArgs: DeleteOneUserArgs) {
-  //   return this.userController.delete(deleteOneUserArgs);
+  // async fileDeleteOne(@Args() deleteOneFileArgs: DeleteOneFileArgs) {
+  //   return this.fileController.delete(deleteOneFileArgs);
   // }
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
@@ -159,18 +159,18 @@ export class UserResolver {
   //   nullable: false,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // async userDeleteMany(@Args() deleteManyUserArgs: DeleteManyUserArgs) {
-  //   return this.userController.deleteMany(deleteManyUserArgs);
+  // async fileDeleteMany(@Args() deleteManyFileArgs: DeleteManyFileArgs) {
+  //   return this.fileController.deleteMany(deleteManyFileArgs);
   // }
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
   // // @UseGuards(PermissionGuard)
-  // @Query(() => AggregateUser, {
+  // @Query(() => AggregateFile, {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // userAggregate(@Args() userAggregateArgs: UserAggregateArgs) {
-  //   return this.userController.aggregate(userAggregateArgs);
+  // fileAggregate(@Args() fileAggregateArgs: FileAggregateArgs) {
+  //   return this.fileController.aggregate(fileAggregateArgs);
   // }
 
   // // @RequiredPermission(Permission.CREATE_CLAIM)
@@ -179,7 +179,7 @@ export class UserResolver {
   //   nullable: true,
   //   description: 'Deskripsinya ada disini loh',
   // })
-  // userCount(@Args() userCountAggregateInput: FindManyUserArgs) {
-  //   return this.userController.count(userCountAggregateInput);
+  // fileCount(@Args() fileCountAggregateInput: FindManyFileArgs) {
+  //   return this.fileController.count(fileCountAggregateInput);
   // }
 }

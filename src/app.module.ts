@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { ProductModule } from './services/product/product.module';
+import { ProductModule } from './services/productz/product.module';
 import { PrismaService } from 'prisma/prisma.service';
-import { join } from 'path';
-import { UserModule } from './services/user/user.module';
+// import { join } from 'path';
+import { UserModule } from './services/userz/user.module';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 
 @Module({
@@ -13,7 +13,7 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
       driver: ApolloDriver,
       useFactory: () => {
         return {
-          autoSchemaFile: join(process.cwd(), 'graphql/schema.gql'),
+          // autoSchemaFile: join(process.cwd(), 'graphql/schema.gql'),
           playground: false,
           plugins: [ApolloServerPluginLandingPageLocalDefault()],
           formatError: (error) => {

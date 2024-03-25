@@ -5,11 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var NestedDateTimeFilter_1, NestedDateTimeWithAggregatesFilter_1, NestedFloatFilter_1, NestedFloatWithAggregatesFilter_1, NestedIntFilter_1, NestedIntNullableFilter_1, NestedIntWithAggregatesFilter_1, NestedStringFilter_1, NestedStringNullableFilter_1, NestedStringNullableWithAggregatesFilter_1, NestedStringWithAggregatesFilter_1, ProductScalarWhereWithAggregatesInput_1, ProductScalarWhereInput_1, ProductWhereInput_1, UserScalarWhereWithAggregatesInput_1, UserWhereInput_1;
+var NestedDateTimeFilter_1, NestedDateTimeWithAggregatesFilter_1, NestedEnumGenderEnumNullableFilter_1, NestedEnumGenderEnumNullableWithAggregatesFilter_1, NestedFloatFilter_1, NestedFloatWithAggregatesFilter_1, NestedIntFilter_1, NestedIntNullableFilter_1, NestedIntWithAggregatesFilter_1, NestedStringFilter_1, NestedStringNullableFilter_1, NestedStringNullableWithAggregatesFilter_1, NestedStringWithAggregatesFilter_1, ProductScalarWhereWithAggregatesInput_1, ProductScalarWhereInput_1, ProductWhereInput_1, UserScalarWhereWithAggregatesInput_1, UserWhereInput_1;
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductCountAggregate = exports.ProductCountAggregateInput = exports.ProductAvgOrderByAggregateInput = exports.ProductAvgAggregate = exports.ProductAvgAggregateInput = exports.ProductAggregateArgs = exports.FindUniqueProductArgs = exports.FindUniqueProductOrThrowArgs = exports.FindManyProductArgs = exports.FindFirstProductArgs = exports.FindFirstProductOrThrowArgs = exports.DeleteOneProductArgs = exports.DeleteManyProductArgs = exports.CreateOneProductArgs = exports.CreateManyProductArgs = exports.AggregateProduct = exports.StringWithAggregatesFilter = exports.StringNullableWithAggregatesFilter = exports.StringNullableFilter = exports.StringFilter = exports.StringFieldUpdateOperationsInput = exports.SortOrderInput = exports.NullableStringFieldUpdateOperationsInput = exports.NestedStringWithAggregatesFilter = exports.NestedStringNullableWithAggregatesFilter = exports.NestedStringNullableFilter = exports.NestedStringFilter = exports.NestedIntWithAggregatesFilter = exports.NestedIntNullableFilter = exports.NestedIntFilter = exports.NestedFloatWithAggregatesFilter = exports.NestedFloatFilter = exports.NestedDateTimeWithAggregatesFilter = exports.NestedDateTimeFilter = exports.IntWithAggregatesFilter = exports.IntFilter = exports.IntFieldUpdateOperationsInput = exports.FloatWithAggregatesFilter = exports.FloatFilter = exports.FloatFieldUpdateOperationsInput = exports.DateTimeWithAggregatesFilter = exports.DateTimeFilter = exports.DateTimeFieldUpdateOperationsInput = exports.AffectedRows = exports.NullsOrder = exports.QueryMode = exports.SortOrder = exports.TransactionIsolationLevel = exports.ProductScalarFieldEnum = exports.UserScalarFieldEnum = void 0;
-exports.DeleteManyUserArgs = exports.CreateOneUserArgs = exports.CreateManyUserArgs = exports.AggregateUser = exports.UpsertOneProductArgs = exports.UpdateOneProductArgs = exports.UpdateManyProductArgs = exports.Product = exports.ProductWhereInput = exports.ProductWhereUniqueInput = exports.ProductUpsertWithWhereUniqueWithoutUserInput = exports.ProductUpdateInput = exports.ProductUpdateWithoutUserInput = exports.ProductUpdateWithWhereUniqueWithoutUserInput = exports.ProductUpdateManyWithoutUserNestedInput = exports.ProductUpdateManyWithWhereWithoutUserInput = exports.ProductUpdateManyMutationInput = exports.ProductUncheckedUpdateInput = exports.ProductUncheckedUpdateWithoutUserInput = exports.ProductUncheckedUpdateManyInput = exports.ProductUncheckedUpdateManyWithoutUserInput = exports.ProductUncheckedUpdateManyWithoutUserNestedInput = exports.ProductUncheckedCreateInput = exports.ProductUncheckedCreateWithoutUserInput = exports.ProductUncheckedCreateNestedManyWithoutUserInput = exports.ProductSumOrderByAggregateInput = exports.ProductSumAggregate = exports.ProductSumAggregateInput = exports.ProductScalarWhereInput = exports.ProductScalarWhereWithAggregatesInput = exports.ProductOrderByWithRelationInput = exports.ProductOrderByWithAggregationInput = exports.ProductOrderByRelationAggregateInput = exports.ProductMinOrderByAggregateInput = exports.ProductMinAggregate = exports.ProductMinAggregateInput = exports.ProductMaxOrderByAggregateInput = exports.ProductMaxAggregate = exports.ProductMaxAggregateInput = exports.ProductListRelationFilter = exports.ProductGroupBy = exports.ProductGroupByArgs = exports.ProductCreateInput = exports.ProductCreateWithoutUserInput = exports.ProductCreateOrConnectWithoutUserInput = exports.ProductCreateNestedManyWithoutUserInput = exports.ProductCreateManyInput = exports.ProductCreateManyUserInput = exports.ProductCreateManyUserInputEnvelope = exports.ProductCountOrderByAggregateInput = void 0;
-exports.User = exports.UserWhereInput = exports.UserWhereUniqueInput = exports.UserUpsertWithoutProductsInput = exports.UserUpdateInput = exports.UserUpdateWithoutProductsInput = exports.UserUpdateToOneWithWhereWithoutProductsInput = exports.UserUpdateOneWithoutProductsNestedInput = exports.UserUpdateManyMutationInput = exports.UserUncheckedUpdateInput = exports.UserUncheckedUpdateWithoutProductsInput = exports.UserUncheckedUpdateManyInput = exports.UserUncheckedCreateInput = exports.UserUncheckedCreateWithoutProductsInput = exports.UserScalarWhereWithAggregatesInput = exports.UserOrderByWithRelationInput = exports.UserOrderByWithAggregationInput = exports.UserNullableRelationFilter = exports.UserMinOrderByAggregateInput = exports.UserMinAggregate = exports.UserMinAggregateInput = exports.UserMaxOrderByAggregateInput = exports.UserMaxAggregate = exports.UserMaxAggregateInput = exports.UserGroupBy = exports.UserGroupByArgs = exports.UserCreateInput = exports.UserCreateWithoutProductsInput = exports.UserCreateOrConnectWithoutProductsInput = exports.UserCreateNestedOneWithoutProductsInput = exports.UserCreateManyInput = exports.UserCount = exports.UserCountOrderByAggregateInput = exports.UserCountAggregate = exports.UserCountAggregateInput = exports.UserAggregateArgs = exports.UpsertOneUserArgs = exports.UpdateOneUserArgs = exports.UpdateManyUserArgs = exports.FindUniqueUserArgs = exports.FindUniqueUserOrThrowArgs = exports.FindManyUserArgs = exports.FindFirstUserArgs = exports.FindFirstUserOrThrowArgs = exports.DeleteOneUserArgs = void 0;
+exports.FindUniqueProductArgs = exports.FindUniqueProductOrThrowArgs = exports.FindManyProductArgs = exports.FindFirstProductArgs = exports.FindFirstProductOrThrowArgs = exports.DeleteOneProductArgs = exports.DeleteManyProductArgs = exports.CreateOneProductArgs = exports.CreateManyProductArgs = exports.AggregateProduct = exports.StringWithAggregatesFilter = exports.StringNullableWithAggregatesFilter = exports.StringNullableFilter = exports.StringFilter = exports.StringFieldUpdateOperationsInput = exports.SortOrderInput = exports.NullableStringFieldUpdateOperationsInput = exports.NullableEnumGenderEnumFieldUpdateOperationsInput = exports.NestedStringWithAggregatesFilter = exports.NestedStringNullableWithAggregatesFilter = exports.NestedStringNullableFilter = exports.NestedStringFilter = exports.NestedIntWithAggregatesFilter = exports.NestedIntNullableFilter = exports.NestedIntFilter = exports.NestedFloatWithAggregatesFilter = exports.NestedFloatFilter = exports.NestedEnumGenderEnumNullableWithAggregatesFilter = exports.NestedEnumGenderEnumNullableFilter = exports.NestedDateTimeWithAggregatesFilter = exports.NestedDateTimeFilter = exports.IntWithAggregatesFilter = exports.IntFilter = exports.IntFieldUpdateOperationsInput = exports.FloatWithAggregatesFilter = exports.FloatFilter = exports.FloatFieldUpdateOperationsInput = exports.EnumGenderEnumNullableWithAggregatesFilter = exports.EnumGenderEnumNullableFilter = exports.DateTimeWithAggregatesFilter = exports.DateTimeFilter = exports.DateTimeFieldUpdateOperationsInput = exports.AffectedRows = exports.GenderEnum = exports.NullsOrder = exports.QueryMode = exports.SortOrder = exports.TransactionIsolationLevel = exports.ProductScalarFieldEnum = exports.UserScalarFieldEnum = void 0;
+exports.UpdateManyProductArgs = exports.Product = exports.ProductWhereInput = exports.ProductWhereUniqueInput = exports.ProductUpsertWithWhereUniqueWithoutUserInput = exports.ProductUpdateInput = exports.ProductUpdateWithoutUserInput = exports.ProductUpdateWithWhereUniqueWithoutUserInput = exports.ProductUpdateManyWithoutUserNestedInput = exports.ProductUpdateManyWithWhereWithoutUserInput = exports.ProductUpdateManyMutationInput = exports.ProductUncheckedUpdateInput = exports.ProductUncheckedUpdateWithoutUserInput = exports.ProductUncheckedUpdateManyInput = exports.ProductUncheckedUpdateManyWithoutUserInput = exports.ProductUncheckedUpdateManyWithoutUserNestedInput = exports.ProductUncheckedCreateInput = exports.ProductUncheckedCreateWithoutUserInput = exports.ProductUncheckedCreateNestedManyWithoutUserInput = exports.ProductSumOrderByAggregateInput = exports.ProductSumAggregate = exports.ProductSumAggregateInput = exports.ProductScalarWhereInput = exports.ProductScalarWhereWithAggregatesInput = exports.ProductOrderByWithRelationInput = exports.ProductOrderByWithAggregationInput = exports.ProductOrderByRelationAggregateInput = exports.ProductMinOrderByAggregateInput = exports.ProductMinAggregate = exports.ProductMinAggregateInput = exports.ProductMaxOrderByAggregateInput = exports.ProductMaxAggregate = exports.ProductMaxAggregateInput = exports.ProductListRelationFilter = exports.ProductGroupBy = exports.ProductGroupByArgs = exports.ProductCreateInput = exports.ProductCreateWithoutUserInput = exports.ProductCreateOrConnectWithoutUserInput = exports.ProductCreateNestedManyWithoutUserInput = exports.ProductCreateManyInput = exports.ProductCreateManyUserInput = exports.ProductCreateManyUserInputEnvelope = exports.ProductCountOrderByAggregateInput = exports.ProductCountAggregate = exports.ProductCountAggregateInput = exports.ProductAvgOrderByAggregateInput = exports.ProductAvgAggregate = exports.ProductAvgAggregateInput = exports.ProductAggregateArgs = void 0;
+exports.UserWhereInput = exports.UserWhereUniqueInput = exports.UserUpsertWithoutProductsInput = exports.UserUpdateInput = exports.UserUpdateWithoutProductsInput = exports.UserUpdateToOneWithWhereWithoutProductsInput = exports.UserUpdateOneWithoutProductsNestedInput = exports.UserUpdateManyMutationInput = exports.UserUncheckedUpdateInput = exports.UserUncheckedUpdateWithoutProductsInput = exports.UserUncheckedUpdateManyInput = exports.UserUncheckedCreateInput = exports.UserUncheckedCreateWithoutProductsInput = exports.UserScalarWhereWithAggregatesInput = exports.UserOrderByWithRelationInput = exports.UserOrderByWithAggregationInput = exports.UserNullableRelationFilter = exports.UserMinOrderByAggregateInput = exports.UserMinAggregate = exports.UserMinAggregateInput = exports.UserMaxOrderByAggregateInput = exports.UserMaxAggregate = exports.UserMaxAggregateInput = exports.UserGroupBy = exports.UserGroupByArgs = exports.UserCreateInput = exports.UserCreateWithoutProductsInput = exports.UserCreateOrConnectWithoutProductsInput = exports.UserCreateNestedOneWithoutProductsInput = exports.UserCreateManyInput = exports.UserCount = exports.UserCountOrderByAggregateInput = exports.UserCountAggregate = exports.UserCountAggregateInput = exports.UserAggregateArgs = exports.UpsertOneUserArgs = exports.UpdateOneUserArgs = exports.UpdateManyUserArgs = exports.FindUniqueUserArgs = exports.FindUniqueUserOrThrowArgs = exports.FindManyUserArgs = exports.FindFirstUserArgs = exports.FindFirstUserOrThrowArgs = exports.DeleteOneUserArgs = exports.DeleteManyUserArgs = exports.CreateOneUserArgs = exports.CreateManyUserArgs = exports.AggregateUser = exports.UpsertOneProductArgs = exports.UpdateOneProductArgs = void 0;
+exports.User = void 0;
 const graphql_1 = require("@nestjs/graphql");
 const graphql_2 = require("@nestjs/graphql");
 const graphql_3 = require("@nestjs/graphql");
@@ -26,6 +27,7 @@ var UserScalarFieldEnum;
     UserScalarFieldEnum["password"] = "password";
     UserScalarFieldEnum["createdAt"] = "createdAt";
     UserScalarFieldEnum["updatedAt"] = "updatedAt";
+    UserScalarFieldEnum["gender"] = "gender";
 })(UserScalarFieldEnum = exports.UserScalarFieldEnum || (exports.UserScalarFieldEnum = {}));
 var ProductScalarFieldEnum;
 (function (ProductScalarFieldEnum) {
@@ -61,6 +63,13 @@ var NullsOrder;
     NullsOrder["first"] = "first";
     NullsOrder["last"] = "last";
 })(NullsOrder = exports.NullsOrder || (exports.NullsOrder = {}));
+var GenderEnum;
+(function (GenderEnum) {
+    GenderEnum["UNKNOWN"] = "UNKNOWN";
+    GenderEnum["MALE"] = "MALE";
+    GenderEnum["FEMALE"] = "FEMALE";
+})(GenderEnum = exports.GenderEnum || (exports.GenderEnum = {}));
+(0, graphql_6.registerEnumType)(GenderEnum, { name: 'GenderEnum', description: undefined });
 (0, graphql_6.registerEnumType)(NullsOrder, { name: 'NullsOrder', description: undefined });
 (0, graphql_6.registerEnumType)(QueryMode, { name: 'QueryMode', description: undefined });
 (0, graphql_6.registerEnumType)(SortOrder, { name: 'SortOrder', description: undefined });
@@ -154,6 +163,51 @@ DateTimeWithAggregatesFilter = __decorate([
     (0, graphql_4.InputType)()
 ], DateTimeWithAggregatesFilter);
 exports.DateTimeWithAggregatesFilter = DateTimeWithAggregatesFilter;
+let EnumGenderEnumNullableFilter = class EnumGenderEnumNullableFilter {
+};
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], EnumGenderEnumNullableFilter.prototype, "equals", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], EnumGenderEnumNullableFilter.prototype, "in", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], EnumGenderEnumNullableFilter.prototype, "notIn", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter, { nullable: true })
+], EnumGenderEnumNullableFilter.prototype, "not", void 0);
+EnumGenderEnumNullableFilter = __decorate([
+    (0, graphql_4.InputType)()
+], EnumGenderEnumNullableFilter);
+exports.EnumGenderEnumNullableFilter = EnumGenderEnumNullableFilter;
+let EnumGenderEnumNullableWithAggregatesFilter = class EnumGenderEnumNullableWithAggregatesFilter {
+};
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "equals", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "in", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "notIn", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableWithAggregatesFilter, { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "not", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedIntNullableFilter, { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "_count", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter, { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "_min", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter, { nullable: true })
+], EnumGenderEnumNullableWithAggregatesFilter.prototype, "_max", void 0);
+EnumGenderEnumNullableWithAggregatesFilter = __decorate([
+    (0, graphql_4.InputType)()
+], EnumGenderEnumNullableWithAggregatesFilter);
+exports.EnumGenderEnumNullableWithAggregatesFilter = EnumGenderEnumNullableWithAggregatesFilter;
 let FloatFieldUpdateOperationsInput = class FloatFieldUpdateOperationsInput {
 };
 __decorate([
@@ -415,6 +469,51 @@ NestedDateTimeWithAggregatesFilter = NestedDateTimeWithAggregatesFilter_1 = __de
     (0, graphql_4.InputType)()
 ], NestedDateTimeWithAggregatesFilter);
 exports.NestedDateTimeWithAggregatesFilter = NestedDateTimeWithAggregatesFilter;
+let NestedEnumGenderEnumNullableFilter = NestedEnumGenderEnumNullableFilter_1 = class NestedEnumGenderEnumNullableFilter {
+};
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], NestedEnumGenderEnumNullableFilter.prototype, "equals", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], NestedEnumGenderEnumNullableFilter.prototype, "in", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], NestedEnumGenderEnumNullableFilter.prototype, "notIn", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter_1, { nullable: true })
+], NestedEnumGenderEnumNullableFilter.prototype, "not", void 0);
+NestedEnumGenderEnumNullableFilter = NestedEnumGenderEnumNullableFilter_1 = __decorate([
+    (0, graphql_4.InputType)()
+], NestedEnumGenderEnumNullableFilter);
+exports.NestedEnumGenderEnumNullableFilter = NestedEnumGenderEnumNullableFilter;
+let NestedEnumGenderEnumNullableWithAggregatesFilter = NestedEnumGenderEnumNullableWithAggregatesFilter_1 = class NestedEnumGenderEnumNullableWithAggregatesFilter {
+};
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "equals", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "in", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => [GenderEnum], { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "notIn", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableWithAggregatesFilter_1, { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "not", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedIntNullableFilter, { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "_count", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter, { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "_min", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NestedEnumGenderEnumNullableFilter, { nullable: true })
+], NestedEnumGenderEnumNullableWithAggregatesFilter.prototype, "_max", void 0);
+NestedEnumGenderEnumNullableWithAggregatesFilter = NestedEnumGenderEnumNullableWithAggregatesFilter_1 = __decorate([
+    (0, graphql_4.InputType)()
+], NestedEnumGenderEnumNullableWithAggregatesFilter);
+exports.NestedEnumGenderEnumNullableWithAggregatesFilter = NestedEnumGenderEnumNullableWithAggregatesFilter;
 let NestedFloatFilter = NestedFloatFilter_1 = class NestedFloatFilter {
 };
 __decorate([
@@ -769,6 +868,15 @@ NestedStringWithAggregatesFilter = NestedStringWithAggregatesFilter_1 = __decora
     (0, graphql_4.InputType)()
 ], NestedStringWithAggregatesFilter);
 exports.NestedStringWithAggregatesFilter = NestedStringWithAggregatesFilter;
+let NullableEnumGenderEnumFieldUpdateOperationsInput = class NullableEnumGenderEnumFieldUpdateOperationsInput {
+};
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], NullableEnumGenderEnumFieldUpdateOperationsInput.prototype, "set", void 0);
+NullableEnumGenderEnumFieldUpdateOperationsInput = __decorate([
+    (0, graphql_4.InputType)()
+], NullableEnumGenderEnumFieldUpdateOperationsInput);
+exports.NullableEnumGenderEnumFieldUpdateOperationsInput = NullableEnumGenderEnumFieldUpdateOperationsInput;
 let NullableStringFieldUpdateOperationsInput = class NullableStringFieldUpdateOperationsInput {
 };
 __decorate([
@@ -2870,6 +2978,9 @@ __decorate([
 ], UserCountAggregateInput.prototype, "updatedAt", void 0);
 __decorate([
     (0, graphql_1.Field)(() => Boolean, { nullable: true })
+], UserCountAggregateInput.prototype, "gender", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => Boolean, { nullable: true })
 ], UserCountAggregateInput.prototype, "_all", void 0);
 UserCountAggregateInput = __decorate([
     (0, graphql_4.InputType)()
@@ -2897,6 +3008,9 @@ __decorate([
 ], UserCountAggregate.prototype, "updatedAt", void 0);
 __decorate([
     (0, graphql_1.Field)(() => graphql_3.Int, { nullable: false })
+], UserCountAggregate.prototype, "gender", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_3.Int, { nullable: false })
 ], UserCountAggregate.prototype, "_all", void 0);
 UserCountAggregate = __decorate([
     (0, graphql_2.ObjectType)()
@@ -2922,6 +3036,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => SortOrder, { nullable: true })
 ], UserCountOrderByAggregateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => SortOrder, { nullable: true })
+], UserCountOrderByAggregateInput.prototype, "gender", void 0);
 UserCountOrderByAggregateInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserCountOrderByAggregateInput);
@@ -2955,6 +3072,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserCreateManyInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserCreateManyInput.prototype, "gender", void 0);
 UserCreateManyInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserCreateManyInput);
@@ -3011,6 +3131,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserCreateWithoutProductsInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserCreateWithoutProductsInput.prototype, "gender", void 0);
 UserCreateWithoutProductsInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserCreateWithoutProductsInput);
@@ -3035,6 +3158,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserCreateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserCreateInput.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => ProductCreateNestedManyWithoutUserInput, { nullable: true })
 ], UserCreateInput.prototype, "products", void 0);
@@ -3097,6 +3223,9 @@ __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: false })
 ], UserGroupBy.prototype, "updatedAt", void 0);
 __decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserGroupBy.prototype, "gender", void 0);
+__decorate([
     (0, graphql_1.Field)(() => UserCountAggregate, { nullable: true })
 ], UserGroupBy.prototype, "_count", void 0);
 __decorate([
@@ -3129,6 +3258,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Boolean, { nullable: true })
 ], UserMaxAggregateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => Boolean, { nullable: true })
+], UserMaxAggregateInput.prototype, "gender", void 0);
 UserMaxAggregateInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserMaxAggregateInput);
@@ -3153,6 +3285,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserMaxAggregate.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserMaxAggregate.prototype, "gender", void 0);
 UserMaxAggregate = __decorate([
     (0, graphql_2.ObjectType)()
 ], UserMaxAggregate);
@@ -3177,6 +3312,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => SortOrder, { nullable: true })
 ], UserMaxOrderByAggregateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => SortOrder, { nullable: true })
+], UserMaxOrderByAggregateInput.prototype, "gender", void 0);
 UserMaxOrderByAggregateInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserMaxOrderByAggregateInput);
@@ -3201,6 +3339,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Boolean, { nullable: true })
 ], UserMinAggregateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => Boolean, { nullable: true })
+], UserMinAggregateInput.prototype, "gender", void 0);
 UserMinAggregateInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserMinAggregateInput);
@@ -3225,6 +3366,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserMinAggregate.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserMinAggregate.prototype, "gender", void 0);
 UserMinAggregate = __decorate([
     (0, graphql_2.ObjectType)()
 ], UserMinAggregate);
@@ -3249,6 +3393,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => SortOrder, { nullable: true })
 ], UserMinOrderByAggregateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => SortOrder, { nullable: true })
+], UserMinOrderByAggregateInput.prototype, "gender", void 0);
 UserMinOrderByAggregateInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserMinOrderByAggregateInput);
@@ -3286,6 +3433,9 @@ __decorate([
     (0, graphql_1.Field)(() => SortOrder, { nullable: true })
 ], UserOrderByWithAggregationInput.prototype, "updatedAt", void 0);
 __decorate([
+    (0, graphql_1.Field)(() => SortOrderInput, { nullable: true })
+], UserOrderByWithAggregationInput.prototype, "gender", void 0);
+__decorate([
     (0, graphql_1.Field)(() => UserCountOrderByAggregateInput, { nullable: true })
 ], UserOrderByWithAggregationInput.prototype, "_count", void 0);
 __decorate([
@@ -3318,6 +3468,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => SortOrder, { nullable: true })
 ], UserOrderByWithRelationInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => SortOrderInput, { nullable: true })
+], UserOrderByWithRelationInput.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => ProductOrderByRelationAggregateInput, { nullable: true })
 ], UserOrderByWithRelationInput.prototype, "products", void 0);
@@ -3354,6 +3507,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeWithAggregatesFilter, { nullable: true })
 ], UserScalarWhereWithAggregatesInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => EnumGenderEnumNullableWithAggregatesFilter, { nullable: true })
+], UserScalarWhereWithAggregatesInput.prototype, "gender", void 0);
 UserScalarWhereWithAggregatesInput = UserScalarWhereWithAggregatesInput_1 = __decorate([
     (0, graphql_4.InputType)()
 ], UserScalarWhereWithAggregatesInput);
@@ -3378,6 +3534,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserUncheckedCreateWithoutProductsInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserUncheckedCreateWithoutProductsInput.prototype, "gender", void 0);
 UserUncheckedCreateWithoutProductsInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserUncheckedCreateWithoutProductsInput);
@@ -3402,6 +3561,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: true })
 ], UserUncheckedCreateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], UserUncheckedCreateInput.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => ProductUncheckedCreateNestedManyWithoutUserInput, { nullable: true })
 ], UserUncheckedCreateInput.prototype, "products", void 0);
@@ -3429,6 +3591,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUncheckedUpdateManyInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUncheckedUpdateManyInput.prototype, "gender", void 0);
 UserUncheckedUpdateManyInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserUncheckedUpdateManyInput);
@@ -3453,6 +3618,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUncheckedUpdateWithoutProductsInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUncheckedUpdateWithoutProductsInput.prototype, "gender", void 0);
 UserUncheckedUpdateWithoutProductsInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserUncheckedUpdateWithoutProductsInput);
@@ -3477,6 +3645,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUncheckedUpdateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUncheckedUpdateInput.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => ProductUncheckedUpdateManyWithoutUserNestedInput, { nullable: true })
 ], UserUncheckedUpdateInput.prototype, "products", void 0);
@@ -3504,6 +3675,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUpdateManyMutationInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUpdateManyMutationInput.prototype, "gender", void 0);
 UserUpdateManyMutationInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserUpdateManyMutationInput);
@@ -3576,6 +3750,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUpdateWithoutProductsInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUpdateWithoutProductsInput.prototype, "gender", void 0);
 UserUpdateWithoutProductsInput = __decorate([
     (0, graphql_4.InputType)()
 ], UserUpdateWithoutProductsInput);
@@ -3600,6 +3777,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => DateTimeFieldUpdateOperationsInput, { nullable: true })
 ], UserUpdateInput.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => NullableEnumGenderEnumFieldUpdateOperationsInput, { nullable: true })
+], UserUpdateInput.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => ProductUpdateManyWithoutUserNestedInput, { nullable: true })
 ], UserUpdateInput.prototype, "products", void 0);
@@ -3655,6 +3835,9 @@ __decorate([
     (0, graphql_1.Field)(() => DateTimeFilter, { nullable: true })
 ], UserWhereUniqueInput.prototype, "updatedAt", void 0);
 __decorate([
+    (0, graphql_1.Field)(() => EnumGenderEnumNullableFilter, { nullable: true })
+], UserWhereUniqueInput.prototype, "gender", void 0);
+__decorate([
     (0, graphql_1.Field)(() => ProductListRelationFilter, { nullable: true })
 ], UserWhereUniqueInput.prototype, "products", void 0);
 UserWhereUniqueInput = __decorate([
@@ -3691,6 +3874,9 @@ __decorate([
     (0, graphql_1.Field)(() => DateTimeFilter, { nullable: true })
 ], UserWhereInput.prototype, "updatedAt", void 0);
 __decorate([
+    (0, graphql_1.Field)(() => EnumGenderEnumNullableFilter, { nullable: true })
+], UserWhereInput.prototype, "gender", void 0);
+__decorate([
     (0, graphql_1.Field)(() => ProductListRelationFilter, { nullable: true })
 ], UserWhereInput.prototype, "products", void 0);
 UserWhereInput = UserWhereInput_1 = __decorate([
@@ -3717,6 +3903,9 @@ __decorate([
 __decorate([
     (0, graphql_1.Field)(() => Date, { nullable: false })
 ], User.prototype, "updatedAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => GenderEnum, { nullable: true })
+], User.prototype, "gender", void 0);
 __decorate([
     (0, graphql_1.Field)(() => [Product], { nullable: true })
 ], User.prototype, "products", void 0);

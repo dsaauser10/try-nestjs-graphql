@@ -5,7 +5,8 @@ export declare enum UserScalarFieldEnum {
     email = "email",
     password = "password",
     createdAt = "createdAt",
-    updatedAt = "updatedAt"
+    updatedAt = "updatedAt",
+    gender = "gender"
 }
 export declare enum ProductScalarFieldEnum {
     id = "id",
@@ -36,6 +37,11 @@ export declare enum NullsOrder {
     first = "first",
     last = "last"
 }
+export declare enum GenderEnum {
+    UNKNOWN = "UNKNOWN",
+    MALE = "MALE",
+    FEMALE = "FEMALE"
+}
 export declare class AffectedRows {
     count: number;
 }
@@ -64,6 +70,21 @@ export declare class DateTimeWithAggregatesFilter {
     _count?: InstanceType<typeof NestedIntFilter>;
     _min?: InstanceType<typeof NestedDateTimeFilter>;
     _max?: InstanceType<typeof NestedDateTimeFilter>;
+}
+export declare class EnumGenderEnumNullableFilter {
+    equals?: keyof typeof GenderEnum;
+    in?: Array<keyof typeof GenderEnum>;
+    notIn?: Array<keyof typeof GenderEnum>;
+    not?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
+}
+export declare class EnumGenderEnumNullableWithAggregatesFilter {
+    equals?: keyof typeof GenderEnum;
+    in?: Array<keyof typeof GenderEnum>;
+    notIn?: Array<keyof typeof GenderEnum>;
+    not?: InstanceType<typeof NestedEnumGenderEnumNullableWithAggregatesFilter>;
+    _count?: InstanceType<typeof NestedIntNullableFilter>;
+    _min?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
+    _max?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
 }
 export declare class FloatFieldUpdateOperationsInput {
     set?: number;
@@ -151,6 +172,21 @@ export declare class NestedDateTimeWithAggregatesFilter {
     _count?: InstanceType<typeof NestedIntFilter>;
     _min?: InstanceType<typeof NestedDateTimeFilter>;
     _max?: InstanceType<typeof NestedDateTimeFilter>;
+}
+export declare class NestedEnumGenderEnumNullableFilter {
+    equals?: keyof typeof GenderEnum;
+    in?: Array<keyof typeof GenderEnum>;
+    notIn?: Array<keyof typeof GenderEnum>;
+    not?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
+}
+export declare class NestedEnumGenderEnumNullableWithAggregatesFilter {
+    equals?: keyof typeof GenderEnum;
+    in?: Array<keyof typeof GenderEnum>;
+    notIn?: Array<keyof typeof GenderEnum>;
+    not?: InstanceType<typeof NestedEnumGenderEnumNullableWithAggregatesFilter>;
+    _count?: InstanceType<typeof NestedIntNullableFilter>;
+    _min?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
+    _max?: InstanceType<typeof NestedEnumGenderEnumNullableFilter>;
 }
 export declare class NestedFloatFilter {
     equals?: number;
@@ -269,6 +305,9 @@ export declare class NestedStringWithAggregatesFilter {
     _count?: InstanceType<typeof NestedIntFilter>;
     _min?: InstanceType<typeof NestedStringFilter>;
     _max?: InstanceType<typeof NestedStringFilter>;
+}
+export declare class NullableEnumGenderEnumFieldUpdateOperationsInput {
+    set?: keyof typeof GenderEnum;
 }
 export declare class NullableStringFieldUpdateOperationsInput {
     set?: string;
@@ -945,6 +984,7 @@ export declare class UserCountAggregateInput {
     password?: true;
     createdAt?: true;
     updatedAt?: true;
+    gender?: true;
     _all?: true;
 }
 export declare class UserCountAggregate {
@@ -954,6 +994,7 @@ export declare class UserCountAggregate {
     password: number;
     createdAt: number;
     updatedAt: number;
+    gender: number;
     _all: number;
 }
 export declare class UserCountOrderByAggregateInput {
@@ -963,6 +1004,7 @@ export declare class UserCountOrderByAggregateInput {
     password?: keyof typeof SortOrder;
     createdAt?: keyof typeof SortOrder;
     updatedAt?: keyof typeof SortOrder;
+    gender?: keyof typeof SortOrder;
 }
 export declare class UserCount {
     products?: number;
@@ -974,6 +1016,7 @@ export declare class UserCreateManyInput {
     password: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
 }
 export declare class UserCreateNestedOneWithoutProductsInput {
     create?: InstanceType<typeof UserCreateWithoutProductsInput>;
@@ -991,6 +1034,7 @@ export declare class UserCreateWithoutProductsInput {
     password: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
 }
 export declare class UserCreateInput {
     id?: string;
@@ -999,6 +1043,7 @@ export declare class UserCreateInput {
     password: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
     products?: InstanceType<typeof ProductCreateNestedManyWithoutUserInput>;
 }
 export declare class UserGroupByArgs {
@@ -1019,6 +1064,7 @@ export declare class UserGroupBy {
     password: string;
     createdAt: Date | string;
     updatedAt: Date | string;
+    gender?: keyof typeof GenderEnum;
     _count?: InstanceType<typeof UserCountAggregate>;
     _min?: InstanceType<typeof UserMinAggregate>;
     _max?: InstanceType<typeof UserMaxAggregate>;
@@ -1030,6 +1076,7 @@ export declare class UserMaxAggregateInput {
     password?: true;
     createdAt?: true;
     updatedAt?: true;
+    gender?: true;
 }
 export declare class UserMaxAggregate {
     id?: string;
@@ -1038,6 +1085,7 @@ export declare class UserMaxAggregate {
     password?: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
 }
 export declare class UserMaxOrderByAggregateInput {
     id?: keyof typeof SortOrder;
@@ -1046,6 +1094,7 @@ export declare class UserMaxOrderByAggregateInput {
     password?: keyof typeof SortOrder;
     createdAt?: keyof typeof SortOrder;
     updatedAt?: keyof typeof SortOrder;
+    gender?: keyof typeof SortOrder;
 }
 export declare class UserMinAggregateInput {
     id?: true;
@@ -1054,6 +1103,7 @@ export declare class UserMinAggregateInput {
     password?: true;
     createdAt?: true;
     updatedAt?: true;
+    gender?: true;
 }
 export declare class UserMinAggregate {
     id?: string;
@@ -1062,6 +1112,7 @@ export declare class UserMinAggregate {
     password?: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
 }
 export declare class UserMinOrderByAggregateInput {
     id?: keyof typeof SortOrder;
@@ -1070,6 +1121,7 @@ export declare class UserMinOrderByAggregateInput {
     password?: keyof typeof SortOrder;
     createdAt?: keyof typeof SortOrder;
     updatedAt?: keyof typeof SortOrder;
+    gender?: keyof typeof SortOrder;
 }
 export declare class UserNullableRelationFilter {
     is?: InstanceType<typeof UserWhereInput>;
@@ -1082,6 +1134,7 @@ export declare class UserOrderByWithAggregationInput {
     password?: keyof typeof SortOrder;
     createdAt?: keyof typeof SortOrder;
     updatedAt?: keyof typeof SortOrder;
+    gender?: InstanceType<typeof SortOrderInput>;
     _count?: InstanceType<typeof UserCountOrderByAggregateInput>;
     _max?: InstanceType<typeof UserMaxOrderByAggregateInput>;
     _min?: InstanceType<typeof UserMinOrderByAggregateInput>;
@@ -1093,6 +1146,7 @@ export declare class UserOrderByWithRelationInput {
     password?: keyof typeof SortOrder;
     createdAt?: keyof typeof SortOrder;
     updatedAt?: keyof typeof SortOrder;
+    gender?: InstanceType<typeof SortOrderInput>;
     products?: InstanceType<typeof ProductOrderByRelationAggregateInput>;
 }
 export declare class UserScalarWhereWithAggregatesInput {
@@ -1105,6 +1159,7 @@ export declare class UserScalarWhereWithAggregatesInput {
     password?: InstanceType<typeof StringWithAggregatesFilter>;
     createdAt?: InstanceType<typeof DateTimeWithAggregatesFilter>;
     updatedAt?: InstanceType<typeof DateTimeWithAggregatesFilter>;
+    gender?: InstanceType<typeof EnumGenderEnumNullableWithAggregatesFilter>;
 }
 export declare class UserUncheckedCreateWithoutProductsInput {
     id?: string;
@@ -1113,6 +1168,7 @@ export declare class UserUncheckedCreateWithoutProductsInput {
     password: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
 }
 export declare class UserUncheckedCreateInput {
     id?: string;
@@ -1121,6 +1177,7 @@ export declare class UserUncheckedCreateInput {
     password: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    gender?: keyof typeof GenderEnum;
     products?: InstanceType<typeof ProductUncheckedCreateNestedManyWithoutUserInput>;
 }
 export declare class UserUncheckedUpdateManyInput {
@@ -1130,6 +1187,7 @@ export declare class UserUncheckedUpdateManyInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
 }
 export declare class UserUncheckedUpdateWithoutProductsInput {
     id?: InstanceType<typeof StringFieldUpdateOperationsInput>;
@@ -1138,6 +1196,7 @@ export declare class UserUncheckedUpdateWithoutProductsInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
 }
 export declare class UserUncheckedUpdateInput {
     id?: InstanceType<typeof StringFieldUpdateOperationsInput>;
@@ -1146,6 +1205,7 @@ export declare class UserUncheckedUpdateInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
     products?: InstanceType<typeof ProductUncheckedUpdateManyWithoutUserNestedInput>;
 }
 export declare class UserUpdateManyMutationInput {
@@ -1155,6 +1215,7 @@ export declare class UserUpdateManyMutationInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
 }
 export declare class UserUpdateOneWithoutProductsNestedInput {
     create?: InstanceType<typeof UserCreateWithoutProductsInput>;
@@ -1176,6 +1237,7 @@ export declare class UserUpdateWithoutProductsInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
 }
 export declare class UserUpdateInput {
     id?: InstanceType<typeof StringFieldUpdateOperationsInput>;
@@ -1184,6 +1246,7 @@ export declare class UserUpdateInput {
     password?: InstanceType<typeof StringFieldUpdateOperationsInput>;
     createdAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
     updatedAt?: InstanceType<typeof DateTimeFieldUpdateOperationsInput>;
+    gender?: InstanceType<typeof NullableEnumGenderEnumFieldUpdateOperationsInput>;
     products?: InstanceType<typeof ProductUpdateManyWithoutUserNestedInput>;
 }
 export declare class UserUpsertWithoutProductsInput {
@@ -1201,6 +1264,7 @@ export declare class UserWhereUniqueInput {
     password?: InstanceType<typeof StringFilter>;
     createdAt?: InstanceType<typeof DateTimeFilter>;
     updatedAt?: InstanceType<typeof DateTimeFilter>;
+    gender?: InstanceType<typeof EnumGenderEnumNullableFilter>;
     products?: InstanceType<typeof ProductListRelationFilter>;
 }
 export declare class UserWhereInput {
@@ -1213,6 +1277,7 @@ export declare class UserWhereInput {
     password?: InstanceType<typeof StringFilter>;
     createdAt?: InstanceType<typeof DateTimeFilter>;
     updatedAt?: InstanceType<typeof DateTimeFilter>;
+    gender?: InstanceType<typeof EnumGenderEnumNullableFilter>;
     products?: InstanceType<typeof ProductListRelationFilter>;
 }
 export declare class User {
@@ -1222,6 +1287,7 @@ export declare class User {
     password: string;
     createdAt: Date;
     updatedAt: Date;
+    gender: keyof typeof GenderEnum | null;
     products?: Array<Product>;
     _count?: InstanceType<typeof UserCount>;
 }

@@ -1,0 +1,28 @@
+enum GenderEnum {
+  UNKNOWN
+  MALE
+  FEMALE
+
+  @@map("Gender")
+}
+
+enum UserRoleEnum {
+  STUDENT
+  AFFILIATOR
+  MENTOR
+  CUSTOMER
+  ADMIN
+  SUPERUSER
+
+  @@map("UserRoles")
+}
+
+enum ThemeEnum {
+  LIGHT
+  DARK
+}
+
+enum LanguageEnum {
+  ID
+  EN
+}

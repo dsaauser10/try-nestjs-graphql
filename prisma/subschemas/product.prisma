@@ -1,0 +1,14 @@
+import { User } from './user'
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  imageName   String // Field untuk nama gambar
+  imageURL    String // Field untuk URL gambar
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+}
